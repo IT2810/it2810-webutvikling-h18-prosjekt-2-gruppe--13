@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+
+import CheckboxContainer from './components/CheckboxContainer';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <h1>Tabs Demo</h1>
+          <button>DummyButton</button>
+          <CheckboxContainer>
+            <div boxName={"Kenobi"} boxKey={0}></div>
+            <div boxName={"Anakin"} boxKey={1}></div>
+            <div boxName={"Grevious"} boxKey={2}></div>
+            <div boxName={"Yoda"} boxKey={3}></div>
+          </CheckboxContainer>
       </div>
     );
   }
