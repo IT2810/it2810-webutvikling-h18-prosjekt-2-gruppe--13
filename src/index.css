@@ -7,3 +7,26 @@ body {
 * {
     box-sizing: border-box;
 }
+
+
+.tabList {
+  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+}
+
+.tabItem {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+}
+
+.activeTab {
+  background-color: white;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+}
+
+.helloThere {
+  background-color: blue;
+}
