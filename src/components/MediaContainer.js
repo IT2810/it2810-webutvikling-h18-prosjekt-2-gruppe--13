@@ -3,11 +3,6 @@ import React, { Component } from "react";
 class MediaContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      imgURL: "",
-      soundURL: "",
-      textURL: ""
-    };
   }
 
   render() {
