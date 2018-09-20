@@ -29,3 +29,8 @@ body {
 .helloThere {
     background-color: blue;
 }
+
+.imageContainer { /* To make all images (Svgs) same size */
+    width: 200px;
+    height: 200px;
+}

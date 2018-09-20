@@ -15,17 +15,6 @@ export default class ImageFile extends React.Component {
       console.log(res);
       this.setState({ images: res.data });
     });
-
-    if (this.props.albumId) {
-      this.setState({
-        images: [
-          this.state.images.filter(
-            image => image.albumId === this.props.albumId
-          )
-        ]
-      });
-      console.log(this.state.images);
-    }
   }
 
   render() {
