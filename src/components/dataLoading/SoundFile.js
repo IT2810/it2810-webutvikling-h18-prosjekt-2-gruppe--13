@@ -1,62 +1,62 @@
 import React from "react";
-import axios from "axios";
 
 // This code is very ugly, proceed with caution
 
 export default class SoundFile extends React.Component {
   // Much of this code shall be credited to this example (https://codepen.io/StudentOfJS/pen/dzjPwP/)
   constructor(props) {
+    // Needs mandatory prop id={String: "C[0-12]"}
     super(props);
 
     this.state = {
-      selectedCategory: this.props.category
+      selectedId: this.props.id
     };
   }
 
-  setSoundCategory = category => {
+  setSoundCategory = id => {
     // Set which sound that shall be played
     this.setState({
-      selectedCategory: category
+      selectedId: id
     });
   };
 
   playSound = () => {
     // Play the sound for the selected category
-    switch (this.state.selectedCategory) {
-      case "c1":
-        this.sound1.play().catch;
+    switch (this.state.selectedId) {
+      case 1:
+        this.sound1.play();
         break;
-      case "c2":
+      case 2:
         this.sound2.play();
         break;
-      case "c3":
+      case 3:
         this.sound3.play();
         break;
-      case "c4":
+      case 4:
         this.sound4.play();
         break;
-      case "c5":
+      case 5:
         this.sound5.play();
         break;
-      case "c6":
+      case 6:
         this.sound6.play();
         break;
-      case "c7":
+      case 7:
         this.sound7.play();
         break;
-      case "c8":
+      case 8:
         this.sound8.play();
         break;
-      case "c9":
+      case 9:
         this.sound9.play();
         break;
-      case "c10":
+      case 10:
         this.sound10.play();
         break;
-      case "c11":
+      case 11:
         this.sound11.play();
         break;
-      case "c12":
+      case 12:
         this.sound12.play();
         break;
       default:
@@ -67,7 +67,7 @@ export default class SoundFile extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.playSound}>Play da sound</button>{" "}
+        <button onClick={this.playSound}>Play sound</button>{" "}
         {/*Temporary button for playing of the sounds*/}
         {/*Sounds follow*/}
         <audio
