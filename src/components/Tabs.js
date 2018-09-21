@@ -56,8 +56,8 @@ class Tabs extends Component {
 
         <div className="tab-content">
           {children.map(child => {
-            if (child.props.tabName === activeTab) return <div key={child.props.tabName} className={“shown”}> {child.props.children}</div>
-             return <div key={child.props.tabName} className={“not-shown”}> {child.props.children}</div>
+            if (child.props.tabName === activeTab) return <div key={child.props.tabName} className={"shown"}> {child.props.children}</div>
+             return <div key={child.props.tabName} className={"not-shown"}> {child.props.children}</div>
           })}
         </div>
       </div>
