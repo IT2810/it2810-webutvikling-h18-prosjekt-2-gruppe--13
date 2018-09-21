@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default class TextFile extends React.Component {
   constructor(props) {
-    // Needs mandatory prop id={int}
+    // Needs mandatory prop id={id (string) + category (string) eks: "13"}
     super(props);
 
     this.state = {
@@ -16,17 +16,14 @@ export default class TextFile extends React.Component {
       .get("resources/Texts/text.json")
       .then(res => {
         this.setState({
-          texts: res.data[this.props.id] // Loads text from selected id into state-storage
+          texts: res.data[this.props.id + this.props.category] // Loads text from selected id into state-storage
         });
         console.log(this.state.texts);
       })
       .catch(error => {
         // Lets user know if theres an error
         console.log(
-          "Could not retrieve file at path: 'resources/images/" +
-            this.props.file +
-            "'. " +
-            error
+          "Could not retrieve file at path: 'resources/Texts/text.json'" + error
         );
       });
   }

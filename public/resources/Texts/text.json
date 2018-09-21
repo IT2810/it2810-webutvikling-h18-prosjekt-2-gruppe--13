@@ -1,73 +1,73 @@
 [
   {
-    "Id": 1,
-    "Category": "poem",
+    "Id": "1",
+    "Category": "1",
     "title": "The cloud?",
     "body": "Oh thy Cloud\nwho art thee?\nfloating by me\nDarkness among light"
   },
   {
-    "Id": 2,
-    "Category": "poem",
+    "Id": "2",
+    "Category": "1",
     "title": "Smarch",
     "body": "Among all these people\nI feel like I\ndon't fit in"
   },
   {
-    "Id": 3,
-    "Category": "poem",
+    "Id": "3",
+    "Category": "1",
     "title": "Don't touch",
     "body": "– Willie. Good advice"
   },
   {
-    "Id": 4,
-    "Category": "poem",
+    "Id": "4",
+    "Category": "1",
     "title": "Smile",
     "body": "Grab it\nSnap it\nHand it\nWith a smile"
   },
   {
-    "Id": 5,
-    "Category": "funfact",
+    "Id": "1",
+    "Category": "2",
     "title": "Fun fact 1",
     "body": "'God' is the only character portrayed on The Simpsons to ever have five fingers."
   },
   {
-    "Id": 6,
-    "Category": "funfact",
+    "Id": "2",
+    "Category": "2",
     "title": "Fun fact 2",
     "body": "'The quick brown fox jumps over the lazy dog' is an English-language pangram—a phrase that contains all of the letters of the alphabet."
   },
   {
-    "Id": 7,
-    "Category": "funfact",
+    "Id": "3",
+    "Category": "2",
     "title": "Fun fact 3",
     "body": "The average lifespan of a bear is around ten years, though black bears can live upward of 30 years in the wild."
   },
   {
-    "Id": 8,
-    "Category": "funfact",
+    "Id": "4"
+    "Category": "2",
     "title": "Fun fact 4",
     "body": "As we get older, the pigment cells in our hair follicles gradually die. When there are fewer pigment cells in a hair follicle, that strand of hair will no longer contain as much melanin and will become a more transparent color — like gray, silver, or white — as it grows."
   },
   {
-    "Id": 9,
-    "Category": "quote",
+    "Id": "1",
+    "Category": "3",
     "title": "Quote 1",
     "body": "Don't go around saying the world owes you a living. The world owes you nothing. It was here first. – Mark Twain"
   },
   {
-    "Id": 10,
-    "Category": "quote",
+    "Id": "2",
+    "Category": "3",
     "title": "Quote 2",
     "body": "Why can't I just eat my waffle? – Barack Obama"
   },
   {
-    "Id": 11,
-    "Category": "quote",
+    "Id": "3",
+    "Category": "3",
     "title": "Quote 3",
     "body": "Some folks look at me and see a certain swagger, which in Texas is called 'walking.' – George W. Bush"
   },
   {
-    "Id": 12,
-    "Category": "quote",
+    "Id": "4",
+    "Category": "3",
     "title": "Quote 4",
     "body": "You can put wings on a pig, but you don't make it an eagle. – William J. Clinton"
   },
