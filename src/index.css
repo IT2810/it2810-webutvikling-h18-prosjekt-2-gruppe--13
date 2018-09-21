@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 10px;
     padding: 0;
     font-family: sans-serif;
 }
@@ -9,8 +9,8 @@ body {
 }
 
 .tabList {
-    border-bottom: 1px solid #ccc;
     padding-left: 0;
+    width: 100%;
 }
 
 .tabItem {
@@ -18,19 +18,227 @@ body {
     list-style: none;
     margin-bottom: -1px;
     padding: 0.5rem 0.75rem;
+    flex-grow: 1;
+    background-color: #666666;
+    border: solid #555555;
 }
 
 .activeTab {
-    background-color: white;
+    background-color: lightgrey;
     border: solid #ccc;
-    border-width: 1px 1px 0 1px;
+    border-radius: 5px;
+}
+/*===============================
+Responsive css start
+ */
+
+/*--------------------------------
+Desktop start
+ */
+
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            "header header header"
+            "radioMenu media media"
+            "footer  footer  footer";
+    background-color: #fff;
+    color: #444;
+    text-align: center;
 }
 
-.helloThere {
-    background-color: blue;
+.gridMedia {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+            "image text"
+            "sound sound";
+    height: 100%;
+    background-color: lightgrey;
+    border-radius: 5px;
+    color: #444;
 }
+
+.image {
+    grid-area: image;
+}
+
+.text {
+    grid-area: text;
+    padding: 5px;
+}
+
+.sound {
+    grid-area: sound;
+}
+
+.box {
+    background-color: #555555;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+flex-radio {
+    display: block;
+}
+
+.flex-child {
+    flex: 1;
+    min-width: 25%;
+}
+
+.flex-child-radio {
+    display: block;
+}
+
+.header {
+    grid-area: header;
+    background-color: lightskyblue;
+}
+
+.radioMenu {
+    grid-area: radioMenu;
+    background-color: orangered;
+}
+
+.media {
+    grid-area: media;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: lightskyblue;
+}
+
+.header > h1 {
+    font-size: 4vw;
+}
+
+
+
+
+/*--------------------------------
+Desktop end
+ */
+
+/*--------------------------------
+mobile start
+ */
+
+@media screen and (max-width: 600px)  {
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .gridMedia {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .flex-radio {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .flex-child {
+        flex: 1;
+        min-width: 50%;
+    }
+
+    .flex-child-radio {
+        flex: 1;
+        min-width: 25%;
+    }
+
+    .flex-child-radio:first-child {
+        margin-left: 8%;
+    }
+
+    .box {
+        background-color: #555555;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .header {
+        background-color: lightskyblue;
+    }
+
+    .radioMenu {
+        background-color: orangered;
+    }
+
+    .footer {
+        background-color: lightskyblue;
+    }
+
+    .header > h1 {
+        font-size: 5.5vw;
+    }
+
+    .radioSlide1 {
+        display: block;
+        height: 100%; /* 100% Full-height */
+        width: 0; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 15px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+    .radioSlide2 {
+        display: block;
+        height: 100%; /* 100% Full-height */
+        width: 250px; /* 0 width - change this with JavaScript */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Stay on top */
+        top: 0; /* Stay at the top */
+        left: 0;
+        background-color: #111; /* Black*/
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 15px; /* Place content 60px from the top */
+        transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+
+
+}
+
+/*--------------------------------
+mobile end
+ */
+
+/*===============================
+Responsive css end
+ */
+
 
 .imageContainer { /* To make all images (Svgs) same size */
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    padding: 5px;
+}
+
+.soundContainer { /* To make all images (Svgs) same size */
+    width: 50%;
+    padding: 5px;
 }

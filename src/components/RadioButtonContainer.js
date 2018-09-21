@@ -43,6 +43,7 @@ export default class RadioButtonContainer extends React.Component {
   render() {
     // renders the form containing a list of RadioButton-components. The number of components is determined by the number of children the RadioButtonContainer has
     return (
+        <div className={"flex-child-radio"}>
       <form onSubmit={this.handleSubmit}>
         <p>{this.props.title}</p>
         <span className="Radiobuttons">
@@ -53,6 +54,7 @@ export default class RadioButtonContainer extends React.Component {
           })}
         </span>
       </form>
+        </div>
     );
   }
 }

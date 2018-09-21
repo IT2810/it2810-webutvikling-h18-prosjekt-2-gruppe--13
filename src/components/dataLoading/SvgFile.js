@@ -76,7 +76,7 @@ export default class SvgFile extends React.Component {
 
   render() {
     return (
-      <div className="imageContainer">
+      <div className="image imageContainer">
         <div dangerouslySetInnerHTML={{ __html: this.state.curImage }} />
       </div>
     );

@@ -29,7 +29,7 @@ export default class TextFile extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={"text"}>
         <h3>
           {this.state.texts
             .filter(text => text.Id === this.props.id)
