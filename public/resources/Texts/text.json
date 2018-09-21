@@ -1,73 +1,61 @@
 [
   {
-    "Id": "1",
-    "Category": "1",
+    "Id": "11",
     "title": "The cloud?",
     "body": "Oh thy Cloud\nwho art thee?\nfloating by me\nDarkness among light"
   },
   {
-    "Id": "2",
-    "Category": "1",
+    "Id": "21",
     "title": "Smarch",
     "body": "Among all these people\nI feel like I\ndon't fit in"
   },
   {
-    "Id": "3",
-    "Category": "1",
+    "Id": "31",
     "title": "Don't touch",
     "body": "– Willie. Good advice"
   },
   {
-    "Id": "4",
-    "Category": "1",
+    "Id": "41",
     "title": "Smile",
     "body": "Grab it\nSnap it\nHand it\nWith a smile"
   },
   {
-    "Id": "1",
-    "Category": "2",
+    "Id": "12",
     "title": "Fun fact 1",
     "body": "'God' is the only character portrayed on The Simpsons to ever have five fingers."
   },
   {
-    "Id": "2",
-    "Category": "2",
+    "Id": "22",
     "title": "Fun fact 2",
     "body": "'The quick brown fox jumps over the lazy dog' is an English-language pangram—a phrase that contains all of the letters of the alphabet."
   },
   {
-    "Id": "3",
-    "Category": "2",
+    "Id": "32",
     "title": "Fun fact 3",
     "body": "The average lifespan of a bear is around ten years, though black bears can live upward of 30 years in the wild."
   },
   {
-    "Id": "4",
-    "Category": "2",
+    "Id": "42",
     "title": "Fun fact 4",
     "body": "As we get older, the pigment cells in our hair follicles gradually die. When there are fewer pigment cells in a hair follicle, that strand of hair will no longer contain as much melanin and will become a more transparent color — like gray, silver, or white — as it grows."
   },
   {
-    "Id": "1",
-    "Category": "3",
+    "Id": "13",
     "title": "Quote 1",
     "body": "Don't go around saying the world owes you a living. The world owes you nothing. It was here first. – Mark Twain"
   },
   {
-    "Id": "2",
-    "Category": "3",
+    "Id": "23",
     "title": "Quote 2",
     "body": "Why can't I just eat my waffle? – Barack Obama"
   },
   {
-    "Id": "3",
-    "Category": "3",
+    "Id": "33",
     "title": "Quote 3",
     "body": "Some folks look at me and see a certain swagger, which in Texas is called 'walking.' – George W. Bush"
   },
   {
-    "Id": "4",
-    "Category": "3",
+    "Id": "43",
     "title": "Quote 4",
     "body": "You can put wings on a pig, but you don't make it an eagle. – William J. Clinton"
   }
