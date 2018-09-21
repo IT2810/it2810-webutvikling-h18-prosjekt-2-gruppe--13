@@ -17,7 +17,7 @@ export default class RadioButtonContainer extends React.Component {
     // the id of the chosen button
     // Should be run when user clicks on a radioButton. Changes state to correct selectedId
     this.setState({ selectedId: i });
-    this.props.onButtonChange(this.props.rbcKey, label, this.props.title);
+    this.props.onButtonChange(this.props.rbcKey, label, this.props.title, i);
   };
 
   handleSubmit = event => {

@@ -16,9 +16,8 @@ export default class TextFile extends React.Component {
       .get("resources/Texts/text.json")
       .then(res => {
         this.setState({
-          texts: res.data[this.props.id + this.props.category] // Loads text from selected id into state-storage
+          texts: res.data[(this.props.id[0], this.props.id[1])] // Loads text from selected id into state-storage
         });
-        console.log(this.state.texts);
       })
       .catch(error => {
         // Lets user know if theres an error

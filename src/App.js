@@ -12,6 +12,8 @@ class App extends Component {
 
     this.state = {
       categories: ["", "", ""],
+      imageCategory: "",
+      textCategory: "",
       sound1: "",
       sound2: "",
       sound3: "",
@@ -19,15 +21,26 @@ class App extends Component {
     };
   }
 
-  handleRadioButtonChange(key, label, title) {
-    console.log(
-      "Key: " + key.toString() + ", Label: " + label + " is now selected"
-    );
+  handleRadioButtonChange(key, label, title, categoryIndex) {
+    let soundChanges = {
+      sound1: this.state.sound1,
+      sound2: this.state.sound2,
+      sound3: this.state.sound3,
+      sound4: this.state.sound4
+    };
+    let imageChanges = this.state.imageCategory;
+    let textChanges = this.state.textCategory;
 
-    let soundChanges;
-
-    if (title === "Lyd") {
+    if (title === "Sound") {
       soundChanges = this.findSoundFiles(label);
+    }
+
+    if (title === "Image") {
+      imageChanges = categoryIndex;
+    }
+
+    if (title === "Text") {
+      textChanges = categoryIndex;
     }
 
     let newCategories = [...this.state.categories];
@@ -36,21 +49,22 @@ class App extends Component {
     let newState = Object.assign(
       {},
       { categories: newCategories },
+      { imageCategory: imageChanges },
+      { textCategory: textChanges },
       soundChanges
     );
 
-    console.log(newState);
     this.setState(newState);
   }
 
   findSoundFiles = label => {
     let soundDict;
 
-    if (label === "Mennesker") {
+    if (label === "Humans") {
       soundDict = { sound1: 1, sound2: 2, sound3: 3, sound4: 4 };
-    } else if (label === "Natur") {
+    } else if (label === "Nature") {
       soundDict = { sound1: 5, sound2: 6, sound3: 7, sound4: 8 };
-    } else if (label === "Livet") {
+    } else if (label === "Life") {
       soundDict = { sound1: 9, sound2: 10, sound3: 11, sound4: 12 };
     }
 
@@ -63,68 +77,68 @@ class App extends Component {
         <h1>Tabs Demo</h1>
 
         <RadioButtonContainer
-          title={"Bilder"}
+          title={"Image"}
           rbcKey={0}
           onButtonChange={this.handleRadioButtonChange}
         >
           <div buttonValue={1} label={"Hei"} />
-          <div buttonValue={2} label={"Hva"} />
-          <div buttonValue={3} label={"skjEEER"} />
+          <div buttonValue={2} label={"Nature"} />
+          <div buttonValue={3} label={"Illustrations"} />
         </RadioButtonContainer>
         <RadioButtonContainer
-          title={"Tekst"}
+          title={"Text"}
           rbcKey={1}
           onButtonChange={this.handleRadioButtonChange}
         >
-          <div buttonValue={4} label={"du"} />
-          <div buttonValue={5} label={"ER"} />
-          <div buttonValue={6} label={"KUL"} />
+          <div buttonValue={1} label={"du"} />
+          <div buttonValue={2} label={"ER"} />
+          <div buttonValue={3} label={"KUL"} />
         </RadioButtonContainer>
         <RadioButtonContainer
-          title={"Lyd"}
+          title={"Sound"}
           rbcKey={2}
           onButtonChange={this.handleRadioButtonChange}
         >
-          <div buttonValue={7} label={"Mennesker"} />
-          <div buttonValue={8} label={"Natur"} />
-          <div buttonValue={9} label={"Livet"} />
+          <div buttonValue={1} label={"Humans"} />
+          <div buttonValue={2} label={"Nature"} />
+          <div buttonValue={3} label={"Life"} />
         </RadioButtonContainer>
 
         <Tabs>
-          <div tabName="Gator">
+          <div tabName="Gallery 1">
             <MediaContainer
               mediaKey={1}
               activeCategories={this.state.categories}
-              soundSource={"C" + this.state.sound1.toString()}
-              imgSource={""}
-              textSource={""}
+              soundSource={this.state.sound1}
+              imgSource={this.state.imageCategory}
+              textSource={this.state.textCategory}
             />
           </div>
-          <div tabName="Croc">
+          <div tabName="Gallery 2">
             <MediaContainer
               mediaKey={2}
               activeCategories={this.state.categories}
-              soundSource={"C" + this.state.sound2.toString()}
-              imgSource={""}
-              textSource={""}
+              soundSource={this.state.sound2}
+              imgSource={this.state.imageCategory}
+              textSource={this.state.textCategory}
             />
           </div>
-          <div tabName="Sarcosuchus">
+          <div tabName="Gallery 3">
             <MediaContainer
               mediaKey={3}
               activeCategories={this.state.categories}
-              soundSource={"C" + this.state.sound3.toString()}
-              imgSource={""}
-              textSource={""}
+              soundSource={this.state.sound3}
+              imgSource={this.state.imageCategory}
+              textSource={this.state.textCategory}
             />
           </div>
-          <div tabName="Heyhey">
+          <div tabName="Gallery 4">
             <MediaContainer
               mediaKey={4}
               activeCategories={this.state.categories}
-              soundSource={"C" + this.state.sound4.toString()}
-              imgSource={""}
-              textSource={""}
+              soundSource={this.state.sound4}
+              imgSource={this.state.imageCategory}
+              textSource={this.state.textCategory}
             />
           </div>
         </Tabs>
