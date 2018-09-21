@@ -14,25 +14,17 @@ class App extends Component {
       categories: ["", "", ""],
       imageCategory: "",
       textCategory: "",
-      sound1: "",
-      sound2: "",
-      sound3: "",
-      sound4: ""
+      soundCategory: ""
     };
   }
 
   handleRadioButtonChange(key, label, title, categoryIndex) {
-    let soundChanges = {
-      sound1: this.state.sound1,
-      sound2: this.state.sound2,
-      sound3: this.state.sound3,
-      sound4: this.state.sound4
-    };
+    let soundChanges = this.state.soundCategory;
     let imageChanges = this.state.imageCategory;
     let textChanges = this.state.textCategory;
 
     if (title === "Sound") {
-      soundChanges = this.findSoundFiles(label);
+      soundChanges = categoryIndex;
     }
 
     if (title === "Image") {
@@ -51,97 +43,90 @@ class App extends Component {
       { categories: newCategories },
       { imageCategory: imageChanges },
       { textCategory: textChanges },
-      soundChanges
+        {soundCategory : soundChanges}
     );
 
     this.setState(newState);
   }
 
-  findSoundFiles = label => {
-    let soundDict;
-
-    if (label === "Humans") {
-      soundDict = { sound1: 1, sound2: 2, sound3: 3, sound4: 4 };
-    } else if (label === "Nature") {
-      soundDict = { sound1: 5, sound2: 6, sound3: 7, sound4: 8 };
-    } else if (label === "Life") {
-      soundDict = { sound1: 9, sound2: 10, sound3: 11, sound4: 12 };
-    }
-
-    return soundDict;
-  };
-
   render() {
     return (
-      <div>
-        <h1>Tabs Demo</h1>
-
-        <RadioButtonContainer
-          title={"Image"}
-          rbcKey={0}
-          onButtonChange={this.handleRadioButtonChange}
-        >
-          <div buttonValue={1} label={"Hei"} />
-          <div buttonValue={2} label={"Nature"} />
-          <div buttonValue={3} label={"Illustrations"} />
-        </RadioButtonContainer>
-        <RadioButtonContainer
-          title={"Text"}
-          rbcKey={1}
-          onButtonChange={this.handleRadioButtonChange}
-        >
-          <div buttonValue={1} label={"du"} />
-          <div buttonValue={2} label={"ER"} />
-          <div buttonValue={3} label={"KUL"} />
-        </RadioButtonContainer>
-        <RadioButtonContainer
-          title={"Sound"}
-          rbcKey={2}
-          onButtonChange={this.handleRadioButtonChange}
-        >
-          <div buttonValue={1} label={"Humans"} />
-          <div buttonValue={2} label={"Nature"} />
-          <div buttonValue={3} label={"Life"} />
-        </RadioButtonContainer>
-
-        <Tabs>
-          <div tabName="Gallery 1">
-            <MediaContainer
-              mediaKey={1}
-              activeCategories={this.state.categories}
-              soundSource={this.state.sound1}
-              imgSource={this.state.imageCategory}
-              textSource={this.state.textCategory}
-            />
-          </div>
-          <div tabName="Gallery 2">
-            <MediaContainer
-              mediaKey={2}
-              activeCategories={this.state.categories}
-              soundSource={this.state.sound2}
-              imgSource={this.state.imageCategory}
-              textSource={this.state.textCategory}
-            />
-          </div>
-          <div tabName="Gallery 3">
-            <MediaContainer
-              mediaKey={3}
-              activeCategories={this.state.categories}
-              soundSource={this.state.sound3}
-              imgSource={this.state.imageCategory}
-              textSource={this.state.textCategory}
-            />
-          </div>
-          <div tabName="Gallery 4">
-            <MediaContainer
-              mediaKey={4}
-              activeCategories={this.state.categories}
-              soundSource={this.state.sound4}
-              imgSource={this.state.imageCategory}
-              textSource={this.state.textCategory}
-            />
-          </div>
-        </Tabs>
+      <div className={"grid"}>
+        <header className={"header box"}>
+            <h1>Prosjekt 2 – Gruppe 13</h1>
+        </header>
+        <div className={"radioMenu flex-radio box"}>
+            <RadioButtonContainer
+                title={"Image"}
+                rbcKey={0}
+                onButtonChange={this.handleRadioButtonChange}
+            >
+                <div buttonValue={1} label={"People"} />
+                <div buttonValue={2} label={"Nature"} />
+                <div buttonValue={3} label={"Illustrations"} />
+            </RadioButtonContainer>
+            <RadioButtonContainer
+                title={"Text"}
+                rbcKey={1}
+                onButtonChange={this.handleRadioButtonChange}
+            >
+                <div buttonValue={1} label={"Poems"} />
+                <div buttonValue={2} label={"Fun facts"} />
+                <div buttonValue={3} label={"Quotes"} />
+            </RadioButtonContainer>
+            <RadioButtonContainer
+                title={"Sound"}
+                rbcKey={2}
+                onButtonChange={this.handleRadioButtonChange}
+            >
+                <div buttonValue={1} label={"People"} />
+                <div buttonValue={2} label={"Nature"} />
+                <div buttonValue={3} label={"Life"} />
+            </RadioButtonContainer>
+        </div>
+        <div className={"media box"}>
+            <Tabs>
+                <div tabName="Gallery 1">
+                    <MediaContainer
+                        mediaKey={1}
+                        activeCategories={this.state.categories}
+                        soundSource={this.state.soundCategory}
+                        imgSource={this.state.imageCategory}
+                        textSource={this.state.textCategory}
+                    />
+                </div>
+                <div tabName="Gallery 2">
+                    <MediaContainer
+                        mediaKey={2}
+                        activeCategories={this.state.categories}
+                        soundSource={this.state.soundCategory}
+                        imgSource={this.state.imageCategory}
+                        textSource={this.state.textCategory}
+                    />
+                </div>
+                <div tabName="Gallery 3">
+                    <MediaContainer
+                        mediaKey={3}
+                        activeCategories={this.state.categories}
+                        soundSource={this.state.soundCategory}
+                        imgSource={this.state.imageCategory}
+                        textSource={this.state.textCategory}
+                    />
+                </div>
+                <div tabName="Gallery 4">
+                    <MediaContainer
+                        mediaKey={4}
+                        activeCategories={this.state.categories}
+                        soundSource={this.state.soundCategory}
+                        imgSource={this.state.imageCategory}
+                        textSource={this.state.textCategory}
+                    />
+                </div>
+            </Tabs>
+        </div>
+        <div className={"footer box"}>
+          <p>Takk for oss – på gjennsyn ved neste prosjekt</p>
+        </div>
       </div>
     );
   }
