@@ -31,6 +31,7 @@ class Tab extends Component {
   }
 }
 
+// Typesjekking for å sikre at verdiene er gyldige.
 Tab.propTypes = {
   activeTab: PropTypes.string.isRequired,
   tabName: PropTypes.string.isRequired,
