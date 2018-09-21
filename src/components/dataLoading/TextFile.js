@@ -16,7 +16,7 @@ export default class TextFile extends React.Component {
       .get("resources/Texts/text.json")
       .then(res => {
         this.setState({
-          texts: res.data[(this.props.id[0], this.props.id[1])] // Loads text from selected id into state-storage
+          texts: res.data // Loads text from selected id into state-storage
         });
       })
       .catch(error => {
@@ -30,9 +30,17 @@ export default class TextFile extends React.Component {
   render() {
     return (
       <div>
-        <h3>{this.state.texts.title}</h3>
+        <h3>
+          {this.state.texts
+            .filter(text => text.Id === this.props.id)
+            .map(text => text.title)}
+        </h3>
         <hr />
-        <p>{this.state.texts.body}</p>
+        <p>
+          {this.state.texts
+            .filter(text => text.Id === this.props.id)
+            .map(text => text.body)}
+        </p>
       </div>
     );
   }
