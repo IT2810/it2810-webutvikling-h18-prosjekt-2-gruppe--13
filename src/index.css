@@ -232,6 +232,14 @@ mobile end
 Responsive css end
  */
 
+ .shown {
+   display: block;
+}
+
+.not-shown {
+   display: none;
+}
+
 
 .imageContainer { /* To make all images (Svgs) same size */
     width: 100%;
