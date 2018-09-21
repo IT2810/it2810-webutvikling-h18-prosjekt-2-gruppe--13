@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import SoundFile from "../components/dataLoading/SoundFile";
 
 class MediaContainer extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class MediaContainer extends Component {
           <br />- Tekst: {this.props.activeCategories[1]}
           <br />- Lyd: {this.props.activeCategories[2]}
         </p>
+        <SoundFile id={this.props.soundSource} />
       </div>
     );
   }
