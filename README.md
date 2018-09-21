@@ -44,7 +44,7 @@ Vi satte opp en test for webapplikasjonen på datamaskin, og gjorde nødvendige 
 
 
 
-| Device                                                            | Google Chrome MacOS               |
+| Device                                                            | OnePlus 5 (nettleser på mobilen, Google Chrome)               |
 |-------------------------------------------------------------------|-----------------------------------|
 | Oppgave                                                           | Resultat                          |
 | 1. Last inn webapplikasjonen                                      | Webapplikasjonen lastet inn riktig |
@@ -52,39 +52,19 @@ Vi satte opp en test for webapplikasjonen på datamaskin, og gjorde nødvendige 
 | 3. Bytt mellom galleriene                                         | Inneholdet i tabview byttes             |
 | 4. Spill av lyd                                                   | Lyden spiller av             |
 | 5. Bytt galleri samtidig som lyden spilles av                     | Lyden stopper, innholdet i tab byttes|
-| 6. Gjør skaleringen på vinduet mindre                             | Vinduet blir mindre, og webapplikasjonen skalerer deretter  |
-| 7. Etter skaleringen er mindre, gjennomfør testene 2.-5. Om igjen | Alt fungerer som i de forrige testene  |
+| 6. Endre fra vertical-view til horizontal-view                    | Webapplikasjonen tilpasser seg, og gir et bedre tilpasset view   |
+| 7. Etter endret view, gjennomfør testene 2.-5. Om igjen           | Alt fungerer som i de forrige testene  |
 
-
-
-
-|                                                                   | OnePlus 5 |
-| Device                                                            | (Nettleser på mobilen, google chrome) |
-|-------------------------------------------------------------------|---------------------------------------|
-| Oppgave                                                           | Resultat |
-| 1. Last inn webapplikasjonen                                      | Webapplikasjonen lastet inn |
-| 2. Velg kategorier innenfor hvert media                           | Knappene fungerer, innholdet byttet |
-| 3. Bytt mellom galleriene                                         | Innholdet i tabview byttes  |
-| 4. Spill av lyd                                                   | Lyden spilles av  |
-| 5. Bytt galleri samtidig som lyden spilles av                     | Lyden stopper, og innholdet byttes  |
-| 6. Endre fra vertical-view til horizontal-view                    | Webapplikasjonen tilpasser seg, og gir et bedre tilpasset view |
-| 7. Etter endret view, gjennomfør testene 2.-5. Om igjen           | Alt fungerer som ved forrige test   |
-
-
-
-| Device                                                            | Pixel 2                                                        |
-|                                                                   |(Gjennom                                                        |
-|                                                                   |Google Chrome)                                                  |
-|-------------------------------------------------------------------|----------------------------------------------------------------|
-| Oppgave                                                           | Resultat                                                       |
-| 1. Last inn webapplikasjonen                                      | Webapplikasjonen lastet inn                                    |
-| 2. Velg kategorier innenfor hvert media                           | Knappene fungerer, innholdet byttet                            |
-| 3. Bytt mellom galleriene                                         | Innholdet i tabview byttes                                     |
-| 4. Spill av lyd                                                   | Lyden spilles av                                               |
-| 5. Bytt galleri samtidig som lyden spilles av                     | Lyden stopper, og innholdet byttes                             |
-| 6. Endre fra vertical-view til horizontal-view                    | Webapplikasjonen tilpasser seg, og gir et bedre tilpasset view |
-| 7. Etter endret view, gjennomfør testene 2.-5. Om igjen           | Alt fungerer som ved forrige test                              |
-
+| Device                                                            | Pixel 2 (gjennom Google Chrome på macOS) |
+|-------------------------------------------------------------------|-----------------------------------|
+| Oppgave                                                           | Resultat                          |
+| 1. Last inn webapplikasjonen                                      | Webapplikasjonen lastet inn riktig |
+| 2. Velg kategorier innenfor hvert media                           | Knappene fungerer og innholdet byttet|
+| 3. Bytt mellom galleriene                                         | Inneholdet i tabview byttes             |
+| 4. Spill av lyd                                                   | Lyden spiller av             |
+| 5. Bytt galleri samtidig som lyden spilles av                     | Lyden stopper, innholdet i tab byttes|
+| 6. Endre fra vertical-view til horizontal-view                    | Webapplikasjonen tilpasser seg, og gir et bedre tilpasset view   |
+| 7. Etter endret view, gjennomfør testene 2.-5. Om igjen           | Alt fungerer som i de forrige testene  |
 
 
 
