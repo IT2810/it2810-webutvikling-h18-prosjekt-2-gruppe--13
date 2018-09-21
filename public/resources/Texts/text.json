@@ -42,7 +42,7 @@
     "body": "The average lifespan of a bear is around ten years, though black bears can live upward of 30 years in the wild."
   },
   {
-    "Id": "4"
+    "Id": "4",
     "Category": "2",
     "title": "Fun fact 4",
     "body": "As we get older, the pigment cells in our hair follicles gradually die. When there are fewer pigment cells in a hair follicle, that strand of hair will no longer contain as much melanin and will become a more transparent color — like gray, silver, or white — as it grows."
@@ -70,5 +70,5 @@
     "Category": "3",
     "title": "Quote 4",
     "body": "You can put wings on a pig, but you don't make it an eagle. – William J. Clinton"
-  },
+  }
 ]
