@@ -57,9 +57,10 @@ Vi satte opp en test for webapplikasjonen på datamaskin, og gjorde nødvendige 
 
 
 
-| Device                                                            | OnePlus 5 |
-|                                                                   | (Nettleser på mobilen, google chrome |
-|-------------------------------------------------------------------|--------------------------------------|
+
+|                                                                   | OnePlus 5 |
+| Device                                                            | (Nettleser på mobilen, google chrome) |
+|-------------------------------------------------------------------|---------------------------------------|
 | Oppgave                                                           | Resultat |
 | 1. Last inn webapplikasjonen                                      | Webapplikasjonen lastet inn |
 | 2. Velg kategorier innenfor hvert media                           | Knappene fungerer, innholdet byttet |
@@ -68,6 +69,7 @@ Vi satte opp en test for webapplikasjonen på datamaskin, og gjorde nødvendige 
 | 5. Bytt galleri samtidig som lyden spilles av                     | Lyden stopper, og innholdet byttes  |
 | 6. Endre fra vertical-view til horizontal-view                    | Webapplikasjonen tilpasser seg, og gir et bedre tilpasset view |
 | 7. Etter endret view, gjennomfør testene 2.-5. Om igjen           | Alt fungerer som ved forrige test   |
+
 
 
 | Device                                                            | Pixel 2                                                        |
